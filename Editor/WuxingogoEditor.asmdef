@@ -1,0 +1,17 @@
+{
+    "name": "Wuxingogo.Editor",
+    "references": [
+        "GUID:6bda929bf84965749be85d08eb281c9f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
