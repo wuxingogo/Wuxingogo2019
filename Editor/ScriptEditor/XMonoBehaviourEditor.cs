@@ -51,7 +51,7 @@ namespace wuxingogo.Editor
             base.OnXGUI();
 
             serializedObject.Update();
-            serializedObject.UpdateIfDirtyOrScript();
+            serializedObject.UpdateIfRequiredOrScript();
 
             ShowXAttributeMember( target );
         }

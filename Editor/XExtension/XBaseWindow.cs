@@ -68,23 +68,22 @@ public class XBaseWindow : EditorWindow, IHasCustomMenu
 
 	public static void DrawLogo(GUILayoutOption widthLayout)
 	{
-		GUILayout.Box( XResources.LogoTexture, widthLayout, GUILayout.Height( 100 ) );
+		//GUILayout.Box( XResources.LogoTexture, widthLayout, GUILayout.Height( 100 ) );
 	}
 
 
 	public void OnGUI()
 	{
 		DrawLogo( GUILayout.ExpandWidth( true ) );
-		if( GUI.Button( GUILayoutUtility.GetLastRect(), XResources.LogoTexture ) ) {
-			this.Close();
-			string cmdPrefs = GetType().ToString() + "_isPrefix";
-			bool isPrefix = EditorPrefs.GetBool( cmdPrefs, false );
-			EditorPrefs.SetBool( cmdPrefs, !isPrefix );
-			XBaseWindow window = EditorWindow.GetWindow( GetType(), !isPrefix, GetType().Name, true ) as XBaseWindow;
-			window.OnInitialization( closeRecordArgs );
-			return;
-
-		}
+		// if( GUI.Button( GUILayoutUtility.GetLastRect(), XResources.LogoTexture ) ) {
+		// 	this.Close();
+		// 	string cmdPrefs = GetType().ToString() + "_isPrefix";
+		// 	bool isPrefix = EditorPrefs.GetBool( cmdPrefs, false );
+		// 	EditorPrefs.SetBool( cmdPrefs, !isPrefix );
+		// 	XBaseWindow window = EditorWindow.GetWindow( GetType(), !isPrefix, GetType().Name, true ) as XBaseWindow;
+		// 	window.OnInitialization( closeRecordArgs );
+		// 	return;
+		// }
 		if( isAutoScroll )
 			_scrollPos = EditorGUILayout.BeginScrollView( _scrollPos );
 

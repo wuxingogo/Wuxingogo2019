@@ -55,9 +55,9 @@ public class XBaseEditor : Editor
 	private static EditorWindow forcusWindow = null;
     public static void DrawLogo()
     {
-//		InspectorUtilites.GetAllInspector ();
-		if(XResources.LogoTexture != null)
-			GUILayout.Box( XResources.LogoTexture, GUILayout.Width(ForcusWindow.position.width - 40) );
+		// InspectorUtilites.GetAllInspector ();
+		// if(XResources.LogoTexture != null)
+		// 	GUILayout.Box( XResources.LogoTexture, GUILayout.Width(ForcusWindow.position.width - 40) );
     }
 
 	public virtual void OnXGUI()
