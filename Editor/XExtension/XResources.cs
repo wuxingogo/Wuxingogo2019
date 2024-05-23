@@ -39,8 +39,12 @@ namespace wuxingogo.Editor
 			if( _logoTex == null )	
 			{
 				var resPath = AssetDatabase.FindAssets( "wuxingogo t:texture" );
-				var guidPath = AssetDatabase.GUIDToAssetPath( resPath[ 0 ] );
-				_logoTex =  AssetDatabase.LoadAssetAtPath<Texture>(guidPath);
+				if(resPath.Length > 0)
+				{
+					var guidPath = AssetDatabase.GUIDToAssetPath( resPath[ 0 ] );
+					_logoTex =  AssetDatabase.LoadAssetAtPath<Texture>(guidPath);
+				}
+				
 			}
 			return _logoTex;
 		}
